@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" width="25%" />
-    <h1>Hello !! - {{ name }}</h1>
-    <h2>Greetings !! - {{ greet }}</h2>
-    <div v-html="email"></div>
-    <div v-html="hack"></div>
+    <template v-for="name in names">
+      <h3>{{ name }}</h3>
+      <input type="text" name="" placeholder="Last name" />
+      <hr />
+    </template>
   </div>
 </template>
 
@@ -13,10 +13,7 @@ export default {
   name: "App",
   data() {
     return {
-      name: "Md. Ridoy ",
-      greet: "Salam",
-      email: "<b>hridoy4t@gmail.com</b>",
-      hack: `<a href="#" onClick="alert('you have been hacked!!')">Win a Prize!!!</a>`,
+      names: ["Ridoy", "Guy", "Mohammad", "Tisha"],
     };
   },
 };
@@ -30,5 +27,14 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.underline {
+  text-decoration: underline;
+}
+.promoted {
+  color: red;
+}
+.bg-fine {
+  background: #2c3e50;
 }
 </style>
