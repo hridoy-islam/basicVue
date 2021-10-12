@@ -3,7 +3,8 @@
     <img alt="Vue logo" src="./assets/logo.png" width="25%" />
     <h1>Hello !! - {{ name }}</h1>
     <h2>Greetings !! - {{ greet }}</h2>
-    <div v-text="email"></div>
+    <div v-html="email"></div>
+    <div v-html="hack"></div>
   </div>
 </template>
 
@@ -14,7 +15,8 @@ export default {
     return {
       name: "Md. Ridoy ",
       greet: "Salam",
-      email: "hridoy4t@gmail.com",
+      email: "<b>hridoy4t@gmail.com</b>",
+      hack: `<a href="#" onClick="alert('you have been hacked!!')">Win a Prize!!!</a>`,
     };
   },
 };
