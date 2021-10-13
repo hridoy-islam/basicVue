@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-    <template v-for="name in names">
-      <h3>{{ name }}</h3>
-      <input type="text" name="" placeholder="Last name" />
-      <hr />
-    </template>
+    <h1>{{ 2 + 3 + 5 }}</h1>
+    <h1>{{ 5 + 3 + 15 }}</h1>
+    <h2>{{ add(2, 3, 5) }}</h2>
+    <h2>{{ add(12, 23, 15) }}</h2>
+    <h2>{{ multiply(baseNum) }}</h2>
   </div>
 </template>
 
@@ -14,7 +14,17 @@ export default {
   data() {
     return {
       names: ["Ridoy", "Guy", "Mohammad", "Tisha"],
+      baseValue: 10,
+      baseNum: 5,
     };
+  },
+  methods: {
+    add(a, b, c) {
+      return a + b + c;
+    },
+    multiply(value) {
+      return value * this.baseValue;
+    },
   },
 };
 </script>
