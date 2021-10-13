@@ -1,6 +1,9 @@
 <template>
   <div id="app">
-    <form @submit.prevent="submitform"></form>
+    <h1 v-once>{{ name }}</h1>
+    <button @click="name = 'Batman'">Change Name</button>
+
+    <h1 v-pre>{{ name }}</h1>
   </div>
 </template>
 
@@ -9,37 +12,11 @@ export default {
   name: "App",
   data() {
     return {
-      formValues: {
-        name: "",
-        age: null,
-      },
+      name: "Ridoy Islam",
     };
-  },
-  methods: {
-    submitform() {
-      // event.preventDefault();
-      console.log("Form Data", this.formValues);
-    },
   },
 };
 </script>
 
 <style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-.underline {
-  text-decoration: underline;
-}
-.promoted {
-  color: red;
-}
-.bg-fine {
-  background: #2c3e50;
-}
 </style>
